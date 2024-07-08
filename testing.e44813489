@@ -1,0 +1,160 @@
+ERROR: Unable to locate a modulefile for 'python/3.11.4'
+11:19:46   Random seed: 1024
+11:19:46   Config file: config/transductive/inference.yaml
+11:19:46   {'checkpoint': None,
+ 'dataset': {'class': 'FB15k237', 'root': '~/git/ULTRA/kg-datasets/'},
+ 'model': {'class': 'Ultra',
+           'entity_model': {'aggregate_func': 'sum',
+                            'class': 'EntityNBFNet',
+                            'hidden_dims': [64, 64, 64, 64, 64, 64],
+                            'input_dim': 64,
+                            'layer_norm': True,
+                            'message_func': 'distmult',
+                            'short_cut': True},
+           'relation_model': {'aggregate_func': 'sum',
+                              'class': 'RelNBFNet',
+                              'hidden_dims': [64, 64, 64, 64, 64, 64],
+                              'input_dim': 64,
+                              'layer_norm': True,
+                              'message_func': 'distmult',
+                              'short_cut': True}},
+ 'optimizer': {'class': 'AdamW', 'lr': 0.0005},
+ 'output_dir': '~/git/ULTRA/output',
+ 'task': {'adversarial_temperature': 1,
+          'metric': ['mr', 'mrr', 'hits@1', 'hits@3', 'hits@10'],
+          'name': 'TransductiveInference',
+          'num_negative': 256,
+          'strict_negative': True},
+ 'train': {'batch_per_epoch': None,
+           'batch_size': 8,
+           'gpus': [0],
+           'log_interval': 100,
+           'num_epoch': 1000}}
+Downloading https://raw.githubusercontent.com/MichSchli/RelationPrediction/master/data/FB-Toutanova/entities.dict
+Downloading https://raw.githubusercontent.com/MichSchli/RelationPrediction/master/data/FB-Toutanova/relations.dict
+Downloading https://raw.githubusercontent.com/MichSchli/RelationPrediction/master/data/FB-Toutanova/test.txt
+Downloading https://raw.githubusercontent.com/MichSchli/RelationPrediction/master/data/FB-Toutanova/train.txt
+Downloading https://raw.githubusercontent.com/MichSchli/RelationPrediction/master/data/FB-Toutanova/valid.txt
+Processing...
+Done!
+/home/s2569758/miniconda3/lib/python3.12/site-packages/torch_geometric/data/in_memory_dataset.py:284: UserWarning: It is not recommended to directly access the internal storage format `data` of an 'InMemoryDataset'. If you are absolutely certain what you are doing, access the internal storage via `InMemoryDataset._data` instead to suppress this warning. Alternatively, you can access stacked individual attributes of every graph via `dataset.{attr_name}`.
+  warnings.warn(msg)
+/exports/eddie3_homes_local/s2569758/ImproveLPwithLLMs/ultra/tasks.py:181: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  Ahh = torch.sparse.mm(EhT, Eh).coalesce()
+11:20:00   FB15k237 dataset
+11:20:00   #train: 272115, #valid: 17535, #test: 20466
+11:20:01   ------------------------------
+11:20:01   Number of parameters: 168705
+11:20:01   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:20:01   Epoch 0 begin
+/home/s2569758/miniconda3/lib/python3.12/site-packages/torch/utils/cpp_extension.py:1967: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+11:21:48   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:21:48   binary cross entropy: 0.755433
+11:21:57   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:21:57   binary cross entropy: 0.4684
+11:22:05   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:22:05   binary cross entropy: 0.316721
+11:22:14   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:22:14   binary cross entropy: 0.466095
+11:22:22   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:22:22   binary cross entropy: 0.671706
+11:22:31   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:22:31   binary cross entropy: 0.517606
+11:22:39   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:22:39   binary cross entropy: 0.288541
+11:22:48   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:22:48   binary cross entropy: 0.505581
+11:22:56   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:22:56   binary cross entropy: 0.603158
+11:23:04   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:23:04   binary cross entropy: 0.586133
+11:23:13   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:23:13   binary cross entropy: 0.298172
+11:23:21   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:23:21   binary cross entropy: 0.425383
+11:23:30   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:23:30   binary cross entropy: 0.339115
+11:23:38   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:23:38   binary cross entropy: 0.530069
+11:23:47   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:23:47   binary cross entropy: 0.516204
+11:23:55   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:23:55   binary cross entropy: 0.422985
+11:24:04   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:24:04   binary cross entropy: 0.271053
+11:24:12   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:24:12   binary cross entropy: 0.346018
+11:24:21   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:24:21   binary cross entropy: 0.441858
+11:24:29   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:24:29   binary cross entropy: 0.430519
+11:24:38   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:24:38   binary cross entropy: 0.375786
+11:24:46   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:24:46   binary cross entropy: 0.349443
+11:24:54   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:24:54   binary cross entropy: 0.589505
+11:25:03   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:25:03   binary cross entropy: 0.313916
+11:25:11   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:25:11   binary cross entropy: 0.558725
+11:25:20   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:25:20   binary cross entropy: 0.225638
+11:25:28   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:25:28   binary cross entropy: 0.268124
+11:25:37   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:25:37   binary cross entropy: 0.801734
+11:25:45   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:25:45   binary cross entropy: 0.30808
+11:25:54   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:25:54   binary cross entropy: 0.60885
+11:26:02   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:26:02   binary cross entropy: 0.305225
+11:26:11   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:26:11   binary cross entropy: 0.375382
+11:26:19   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:26:19   binary cross entropy: 0.364212
+11:26:27   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:26:28   binary cross entropy: 0.513463
+11:26:36   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:26:36   binary cross entropy: 0.514537
+11:26:44   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:26:44   binary cross entropy: 0.481047
+11:26:53   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:26:53   binary cross entropy: 0.58674
+11:27:01   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:27:01   binary cross entropy: 0.535278
+11:27:10   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:27:10   binary cross entropy: 0.487818
+11:27:18   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:27:18   binary cross entropy: 0.293476
+11:27:27   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:27:27   binary cross entropy: 0.517995
+11:27:35   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:27:35   binary cross entropy: 0.296937
+11:27:44   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:27:44   binary cross entropy: 0.46755
+11:27:52   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:27:52   binary cross entropy: 0.42342
+11:28:01   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:28:01   binary cross entropy: 0.387458
+11:28:09   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:28:09   binary cross entropy: 0.428113
+11:28:17   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:28:17   binary cross entropy: 0.329643
+11:28:26   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:28:26   binary cross entropy: 0.43788
+11:28:34   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:28:34   binary cross entropy: 0.412413
+11:28:43   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:28:43   binary cross entropy: 0.285906
+11:28:51   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:28:51   binary cross entropy: 0.445791
+11:29:00   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:29:00   binary cross entropy: 0.25026
+11:29:08   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:29:08   binary cross entropy: 0.290695
+11:29:17   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+11:29:17   binary cross entropy: 0.29445

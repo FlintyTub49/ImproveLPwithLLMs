@@ -7,7 +7,7 @@
 #$ -pe gpu-a100 1  # Request NNODE A100 GPUs
 #$ -l h_vmem=16G    # Request memory per core
 #$ -l rl9=true     # Use rocky linux true
-nvidia-smi
+
 # Initialise the environment modules
 . /etc/profile.d/modules.sh
 source /exports/applications/support/set_qlogin_environment.sh
