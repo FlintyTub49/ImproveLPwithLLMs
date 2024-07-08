@@ -1,7 +1,9 @@
 #!/bin/sh
 # Grid Engine options (lines prefixed with #$)
-#$ -N testing              
-#$ -cwd                  
+#$ -N First Run              
+#$ -cwd
+#$ -o outputs/
+#$ -e errors/          
 #$ -l h_rt=12:00:00  # Request a runtime
 #$ -q gpu          # Submit the job to the gpu queue
 #$ -pe gpu-a100 1  # Request NNODE A100 GPUs
@@ -22,4 +24,4 @@ module load cuda
 
 # Run the program
 #python train_evaluate_emnist_classification_system.py --filepath_to_arguments_json_file experiment_configs/cifar100_tutorial_config.json
-python script/run.py -c config/transductive/inference.yaml --dataset FB15k237 --epochs 1000 --bpe null --gpus [0] --ckpt null
+python script/run.py -c config/transductive/inference.yaml --dataset FB15k237 --epochs 500 --bpe null --gpus [0] --ckpt null
