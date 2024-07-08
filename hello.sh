@@ -2,8 +2,11 @@
 # Grid Engine options (lines prefixed with #$)
 #$ -N hello              
 #$ -cwd                  
-#$ -l h_rt=00:05:00 
-#$ -l h_vmem=1G
+#$ -l h_rt=12:00:00  # Request a runtime
+#$ -q gpu          # Submit the job to the gpu queue
+#$ -pe gpu-a100 1  # Request NNODE A100 GPUs
+#$ -l h_vmem=16G    # Request memory per core
+#$ -l rl9=true     # Use rocky linux true
 #  These options are:
 #  job name: Test
 #  use the current working directory: -cwd
