@@ -1,7 +1,7 @@
 \#!/bin/sh
 # Grid Engine options (lines prefixed with #$)
 #$ -N First Run              
-#$ -wd /home/s2569578/ImproveLPwithLLMs          
+#$ -cwd          
 #$ -l h_rt=12:00:00  # Request a runtime
 #$ -q gpu          # Submit the job to the gpu queue
 #$ -pe gpu-a100 1  # Request NNODE A100 GPUs
