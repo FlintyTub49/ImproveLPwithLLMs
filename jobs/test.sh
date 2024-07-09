@@ -1,6 +1,6 @@
 #!/bin/sh
 # Grid Engine options (lines prefixed with #$)
-#$ -N hello              
+#$ -N first              
 #$ -wd home/s2569758/ImproveLPwithLLMs
 #$ -o /home/s2569758/ImproveLPwithLLMs/outputs/
 #$ -e /home/s2569758/ImproveLPwithLLMs/errors/
