@@ -1,6 +1,6 @@
 #!/bin/sh
 # Grid Engine options (lines prefixed with #$)
-#$ -N first              
+#$ -N base_second_run          
 #$ -wd /home/s2569758/ImproveLPwithLLMs
 #$ -o /home/s2569758/ImproveLPwithLLMs/outputs/
 #$ -e /home/s2569758/ImproveLPwithLLMs/errors/
@@ -21,7 +21,7 @@
 source /home/s2569758/miniconda3/bin/activate base
 
 # Load Python
-module load python/3.11.4
+module load python
 module load cuda/12.1.1
 
 # Run the program
