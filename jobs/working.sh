@@ -21,7 +21,7 @@
 source /home/s2569758/miniconda3/bin/activate base
 
 # Load Python
-module load python
+# module load python
 module load cuda/12.1.1
 
 # Run the program
