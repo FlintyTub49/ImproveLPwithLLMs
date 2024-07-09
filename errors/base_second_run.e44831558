@@ -1,0 +1,41 @@
+14:02:01   Random seed: 1024
+14:02:01   Config file: config/transductive/inference.yaml
+14:02:01   {'checkpoint': None,
+ 'dataset': {'class': 'FB15k237', 'root': '~/git/ULTRA/kg-datasets/'},
+ 'model': {'class': 'Ultra',
+           'entity_model': {'aggregate_func': 'sum',
+                            'class': 'EntityNBFNet',
+                            'hidden_dims': [64, 64, 64, 64, 64, 64],
+                            'input_dim': 64,
+                            'layer_norm': True,
+                            'message_func': 'distmult',
+                            'short_cut': True},
+           'relation_model': {'aggregate_func': 'sum',
+                              'class': 'RelNBFNet',
+                              'hidden_dims': [64, 64, 64, 64, 64, 64],
+                              'input_dim': 64,
+                              'layer_norm': True,
+                              'message_func': 'distmult',
+                              'short_cut': True}},
+ 'optimizer': {'class': 'AdamW', 'lr': 0.0005},
+ 'output_dir': '~/git/ULTRA/output',
+ 'task': {'adversarial_temperature': 1,
+          'metric': ['mr', 'mrr', 'hits@1', 'hits@3', 'hits@10'],
+          'name': 'TransductiveInference',
+          'num_negative': 256,
+          'strict_negative': True},
+ 'train': {'batch_per_epoch': None,
+           'batch_size': 8,
+           'gpus': [0],
+           'log_interval': 100,
+           'num_epoch': 500}}
+/home/s2569758/miniconda3/lib/python3.12/site-packages/torch_geometric/data/in_memory_dataset.py:284: UserWarning: It is not recommended to directly access the internal storage format `data` of an 'InMemoryDataset'. If you are absolutely certain what you are doing, access the internal storage via `InMemoryDataset._data` instead to suppress this warning. Alternatively, you can access stacked individual attributes of every graph via `dataset.{attr_name}`.
+  warnings.warn(msg)
+/exports/eddie3_homes_local/s2569758/ImproveLPwithLLMs/ultra/tasks.py:181: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  Ahh = torch.sparse.mm(EhT, Eh).coalesce()
+14:02:12   FB15k237 dataset
+14:02:12   #train: 272115, #valid: 17535, #test: 20466
+14:02:13   ------------------------------
+14:02:13   Number of parameters: 168705
+14:02:13   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+14:02:13   Epoch 0 begin
