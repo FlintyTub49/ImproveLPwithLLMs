@@ -1,7 +1,7 @@
 #!/bin/sh
 # Grid Engine options (lines prefixed with #$)
 #$ -N first              
-#$ -wd home/s2569758/ImproveLPwithLLMs
+#$ -wd /home/s2569758/ImproveLPwithLLMs
 #$ -o /home/s2569758/ImproveLPwithLLMs/outputs/
 #$ -e /home/s2569758/ImproveLPwithLLMs/errors/
 #$ -l h_rt=12:00:00  # Request a runtime
