@@ -1,8 +1,10 @@
-output_dir: ~/git/ULTRA/output
+# output_dir: ~/git/ULTRA/output
+output_dir: /home/s2569758/ImproveLPwithLLMs/outputs/
 
 dataset:
   class: {{ dataset }}
-  root: ~/git/ULTRA/kg-datasets/
+  # root: ~/git/ULTRA/kg-datasets/
+  root: /home/s2569758/ImproveLPwithLLMs
 
 model:
   class: Ultra
