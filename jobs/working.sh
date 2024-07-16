@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -l
 # Grid Engine options (lines prefixed with #$)
 #$ -N base_second_run          
 #$ -wd /home/s2569758/ImproveLPwithLLMs
@@ -25,4 +25,4 @@ source /home/s2569758/miniconda3/bin/activate base
 module load cuda/12.1.1
 
 # Run the program
-python script/run.py -c config/transductive/inference.yaml --dataset FB15k237 --epochs 500 --bpe null --gpus [0] --ckpt null
+python script/run.py -c config/transductive/inference.yaml --dataset FB15k237 --epochs 5 --bpe null --gpus [0] --ckpt null
